@@ -17,9 +17,11 @@ contract Lottery {
     using LotteryLibrary for *;
 
     /// @notice Initializes the lottery with a ticket price
-    /// @dev Sets the contract creator as the owner
-    /// @param _ticketPrice The price of each lottery ticket in wei
-    constructor(uint256 _ticketPrice) {
+    /// @dev Can be called to reset the lottery parameters
+    function initializeLottery(uint256 _ticketPrice) public {
+        if (owner != address(0)) {
+            revert LotteryLibrary.OnlyOwner(); // Use custom error if already initialized
+        }
         owner = msg.sender;
         ticketPrice = _ticketPrice;
         lotteryOpen = true;
