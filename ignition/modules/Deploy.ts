@@ -1,13 +1,13 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
 
-const LotteryModule = buildModule("LotteryModule", (m) => {
+const BankModule = buildModule("BankModule", (m) => {
 
-    const Lottery = m.contract("Lottery" );
+    const Bank = m.contract("Bank" );
 
-    return { Lottery };
+    return { Bank };
 });
 
-export default LotteryModule;
+export default BankModule;
 
 
