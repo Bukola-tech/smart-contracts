@@ -1,3 +1,4 @@
 {
-  "BankModule#Bank": "0xebC73a84212d3C939cc04BDcC2F6A5D2DD9Af173"
+  "BankModule#Bank": "0xebC73a84212d3C939cc04BDcC2F6A5D2DD9Af173",
+  "FreelanceModule#FreelancePayment": "0x3e53AB30E388A4b729057301d61D28B7e3F7d487"
 }
